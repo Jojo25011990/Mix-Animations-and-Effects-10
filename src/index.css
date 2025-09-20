@@ -529,6 +529,10 @@ li a:active span {
 		gap: 10;
 	}
 
+	section {
+		padding-inline: 0;
+	}
+
 	.owl-container {
 		scale: 0.78;
 	}
