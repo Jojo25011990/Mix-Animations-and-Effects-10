@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter as Router, Routes, Route } from "react-router";
 
 import Header from "./components/Header";
 import SectionOwl from "./pages/SectionOwl";
@@ -8,7 +8,7 @@ import SectionPriceTable from "./pages/SectionPriceTable";
 const App = () => {
 	return (
 		<>
-			<BrowserRouter>
+			<Router>
 				<Header />
 
 				<Routes>
@@ -19,7 +19,7 @@ const App = () => {
 						element={<SectionPriceTable />}
 					/>
 				</Routes>
-			</BrowserRouter>
+			</Router>
 		</>
 	);
 };
