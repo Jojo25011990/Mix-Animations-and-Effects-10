@@ -1,0 +1,536 @@
+@import "tailwindcss";
+
+body {
+	background-color: #222;
+}
+
+section {
+	width: 100%;
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Header Navigation */
+nav {
+	width: 100%;
+	max-width: 500px;
+	height: 100px;
+}
+
+ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+li a {
+	position: relative;
+	display: inline-block;
+	width: 140px;
+	height: 50px;
+
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: 50px;
+	text-align: center;
+
+	transition: all 0.35s ease-in;
+}
+
+li a span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	width: 25%;
+	height: 100%;
+
+	background-color: #fff;
+
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: all 0.35s ease-in;
+}
+
+li a span:nth-child(2) {
+	left: 25%;
+	transition-delay: 0.15;
+}
+li a span:nth-child(3) {
+	left: 50%;
+	transition-delay: 0.3;
+}
+li a span:nth-child(4) {
+	left: 75%;
+	transition-delay: 0.45;
+}
+
+li a:hover,
+li a:active {
+	color: #222;
+	transition-delay: 0.45;
+}
+
+li a:hover span,
+li a:active span {
+	transform: scaleY(1);
+}
+
+.active {
+	color: #222;
+}
+
+.active span {
+	transform: scaleY(1);
+}
+/* End of Header Navigation */
+
+/* Section 01 - Owl */
+.owl {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.owl-head {
+	position: relative;
+	z-index: 20;
+	width: 100%;
+	height: 250px;
+	background-color: hotpink;
+	border-radius: 50%;
+}
+
+.owl-eye {
+	position: absolute;
+	top: 43px;
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background-color: pink;
+	z-index: 30;
+}
+
+.owl-eye::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	background-color: #000;
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+}
+
+.owl-eye::after {
+	content: "";
+	position: absolute;
+	top: 95px;
+	right: 47px;
+	width: 12%;
+	height: 12%;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.owl-eye-right {
+	right: 20px;
+}
+
+.owl-eye-left {
+	left: 20px;
+}
+
+.owl-nose {
+	position: absolute;
+	top: 165px;
+	left: 150px;
+	z-index: 50;
+
+	width: 0;
+	height: 0;
+
+	border-top: 30px solid #f0ae1b;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+.owl-ear {
+	position: absolute;
+	top: -11px;
+	width: 60px;
+	height: 60px;
+	background-color: hotpink;
+	border-radius: 50% 50% 0 0;
+	border-radius: 100% 10% 100% 10%;
+}
+
+.owl-ear-left {
+	transform: rotate(-30deg);
+	left: 11px;
+}
+.owl-ear-right {
+	right: 11px;
+}
+
+.owl-hair {
+	height: 30px;
+	width: 80px;
+	position: absolute;
+	left: 151px;
+	top: -8px;
+	border-top: 20px solid hotpink;
+	border-radius: 50px 40px 0 0;
+	transform: rotate(130deg);
+}
+.owl-hair::before {
+	content: "";
+	position: absolute;
+	left: 19px;
+	top: -3px;
+	width: 100%;
+	height: 100%;
+	border-top: 20px solid hotpink;
+	border-radius: 50px 40px 0 0;
+}
+.owl-hair::after {
+	content: "";
+	position: absolute;
+	left: 30px;
+	top: -3px;
+	width: 100%;
+	height: 100%;
+	border-top: 20px solid hotpink;
+	border-radius: 0 0 50px 40px;
+	transform: rotate(-56deg);
+}
+.owl-body {
+	position: absolute;
+	top: 30%;
+	left: 7.5%;
+	width: 85%;
+	height: 81%;
+	border-radius: 50%;
+	background-color: pink;
+	z-index: 10;
+}
+
+.owl-body-feather {
+	position: absolute;
+	top: 150px;
+
+	width: 0;
+	height: 0;
+
+	border-top: 30px solid hotpink;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.owl-body-feather-01 {
+	left: 50px;
+}
+.owl-body-feather-02 {
+	left: 125px;
+}
+.owl-body-feather-03 {
+	right: 50px;
+}
+.owl-body-feather-04 {
+	top: 200px;
+	left: 85px;
+}
+.owl-body-feather-05 {
+	top: 200px;
+	right: 85px;
+}
+.owl-body-feather-06 {
+	top: 250px;
+	left: 125px;
+}
+
+.owl-foot {
+	position: absolute;
+	height: 45px;
+	width: 20px;
+	background-color: #f0ae1b;
+	top: 420px;
+	border-radius: 50%;
+	z-index: 12;
+}
+
+.owl-foot-left {
+	left: 100px;
+}
+
+.owl-foot-left::before,
+.owl-foot-left::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #f0ae1b;
+}
+
+.owl-foot-left::before {
+	left: 16px;
+}
+.owl-foot-left::after {
+	left: 32px;
+}
+
+.owl-foot-right {
+	right: 100px;
+}
+
+.owl-foot-right::before,
+.owl-foot-right::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #f0ae1b;
+}
+
+.owl-foot-right::before {
+	right: 16px;
+}
+.owl-foot-right::after {
+	right: 32px;
+}
+
+.owl-wing {
+	position: absolute;
+	top: 206px;
+	width: 120px;
+	height: 100px;
+	background-color: hotpink;
+	z-index: 5;
+}
+
+.owl-wing::before,
+.owl-wing::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: hotpink;
+	border-top-left-radius: 200px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 200px;
+}
+
+.owl-wing-left {
+	left: -50px;
+	border-top-left-radius: 200px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 200px;
+}
+
+.owl-wing-right {
+	right: -50px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 200px;
+	border-bottom-left-radius: 200px;
+	border-bottom-right-radius: 10px;
+}
+
+.owl-wing::before,
+.owl-wing::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: hotpink;
+}
+
+.owl-wing-left::before,
+.owl-wing-left::after,
+.owl-wing-right::before,
+.owl-wing-right::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: hotpink;
+}
+
+.owl-wing-left::before,
+.owl-wing-left::after {
+	border-top-left-radius: 200px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 200px;
+}
+
+.owl-wing-right::before,
+.owl-wing-right::after {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 200px;
+	border-bottom-left-radius: 200px;
+	border-bottom-right-radius: 10px;
+}
+
+.owl-wing-left::before {
+	top: 38px;
+	left: 24px;
+}
+.owl-wing-left::after {
+	top: 74px;
+	left: 44px;
+	transform: rotate(-15deg);
+}
+
+.owl-wing-right::before {
+	top: 38px;
+	right: 24px;
+}
+.owl-wing-right::after {
+	top: 74px;
+	right: 44px;
+	transform: rotate(15deg);
+}
+
+.wood {
+	position: absolute;
+	bottom: -58px;
+	width: 100%;
+	height: 12px;
+	background-color: #895129;
+}
+/* End of Section 01 - Owl */
+
+/* Section 02 - Button */
+.section-02-btn {
+	position: relative;
+	z-index: 10;
+
+	color: rgb(231, 33, 33);
+
+	font-size: 40px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Verdana, Geneva, sans-serif;
+
+	padding: 20px 60px;
+
+	border-radius: 999px;
+
+	transition: all 0.35s;
+
+	cursor: pointer;
+}
+
+.section-02-btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	width: 100%;
+	height: 100%;
+
+	border-radius: 999px;
+
+	transform: scale(1.3);
+
+	transition: all 0.35s;
+}
+
+.section-02-btn:hover,
+.section-02-btn:active {
+	color: rgb(177, 23, 23);
+}
+
+.section-02-btn:hover::before,
+.section-02-btn:active::before {
+	transform: scale(1);
+
+	background-color: rgb(231, 33, 33);
+}
+/* End of Section 02 - Button */
+
+/* Section 03 - Price Table */
+.price-table-card {
+	border: 1px solid white;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.free-trial-main button {
+	background-color: white;
+	color: #222;
+	border-color: white;
+}
+
+.free-trial-main button:hover,
+.free-trial-main button:active {
+	box-shadow: 0 0 2px white, 0 0 3px white, 0 0 5px white, 0 0 10px white,
+		0 0 20px white;
+}
+/* Section 03 - End of Price Table */
+
+/* Media Query */
+@media (max-width: 870px) {
+	.price-table {
+		width: unset;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.price-table .price-table-card {
+		border: 1px solid white;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	.price-table > div {
+		padding: 50px;
+	}
+
+	.price-table p {
+		width: 100%;
+	}
+
+	.price-table button {
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 550px) {
+	header nav {
+		height: unset;
+	}
+
+	header nav ul {
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10;
+	}
+
+	.owl-container {
+		scale: 0.78;
+	}
+}
+/* End of Media Query */
