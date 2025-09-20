@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import SectionOwl from "./pages/SectionOwl";
